@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 
+// lesson3 課題関連　　パッケージレベルに定義した定数
+const val MY_NAME = "ミウラ"
+const val MY_AGE = 50
+const val MY_HOBBY = "ピアノ"
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d("kotlintest", "ログへの出力テスト4")
+        /*Log.d("kotlintest", "ログへの出力テスト4")
 
         // 整数型の変数をnumtoという名前で作成して、10を代入する
         var num = 10
@@ -102,17 +107,31 @@ class MainActivity : AppCompatActivity() {
         val dog2 = Dog("ハチ", 10)    // 名前をハチ、年齢10歳で、Dogインスタンスを作る
         dog2.say()  // ハチが吠えます（ログ出力）
         Log.d("kotlintest", "犬の名前は" + dog2.name + "です。")
-        Log.d("kotlintest", "犬の年齢は" + dog2.age + "歳です。")
-
-        //ここからｌｅｓｓｏｎ３課題
-
-        // パッケージレベルに定義した定数
-        // const val MY_NAME = "ミウラ"
-        // const val MY_AGE = 50
+        Log.d("kotlintest", "犬の年齢は" + dog2.age + "歳です。")*/
 
 
-        val human = Human("ミウラ", 50)      // 名前をミウラ、年齢 50歳で、Humanのインスタンスを作る
-        human.say()  // （ログ出力）
+
+
+
+        /*＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+        　　　　　　　　　　ここからｌｅｓｓｏｎ３課題
+
+        ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
+
+
+        val human0 = Human(MY_NAME, MY_AGE, MY_HOBBY)      // メンバ変数を用いてHumanインスタンスを作る
+        human0.say()  //ログアウト　私の名前は〜〜です。年は〜〜歳です。
+        human0.think() //ログアウト　「私は〜〜について考える。」
+
+
+        val human1 = Human("カタオカ", 37, "競馬")      // カタオカHumanインスタンスを作る
+        human1.say()
+        human1.think()
+
+        val human2 = Human("ヤマカド", 32, "料理")      // ヤマカドHumanインスタンスを作る
+        human2.say()
+        human2.think()
 
 
 
